@@ -33,4 +33,16 @@ The client then will subscribe to the *topic* **smarthome/mqtt_client/#** and wi
 AskMyPc Controller will get the message and iterate over the *action_map.json* looking for an action to perform based on the recieved *payload* and will try to perform it as a Desktop Application and if it failes, the controller will try to perform the action as a Web Application.
 
 ##### Example of usage
+In the [*action_map.json file*](conf_files/action_map.json):
+- The *facebook* payload is mapped to *https://www.facebook.com/*.
+- The *excel* payload is mapped to *C:/Program Files/Microsoft Office/Root/Office16/EXCEL.EXE*
+- The *word and google* is mapped to a json object containing to mappings:
+  - *C:/Program Files/Microsoft Office/Root/Office16/WINWORD.EXE*
+  - *https://www.google.com*
+
+When the AskMyPc Controller recieves the payloads:
+- *facebook* it will open the facebook site as a web application in your default web browser.
+- *excel* it will open microsoft excel as a desktop application.
+- *word and google* it will open the google website as a web application and microsoft word as a desktop application.
+
 
