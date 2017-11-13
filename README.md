@@ -6,9 +6,9 @@ Upon connecting or disconnecting to the mqtt broker, the client publishes a mess
 ## AskMyPc Controller
 
 A smarthome control component that subscribes to the *topic* **smarthome/mqtt_client/askmypc_action**.</br>
-When the mqtt client recieves a message with this topic, it will hand it over the *AskMyPc* component which will match an action to perform from a designated json file and perform the action on the computer.
+When the mqtt client recieves a message with this topic, it will hand it over the *AskMyPc* controller which will match an action to perform from a designated json file and perform the action on the computer.
 
-Please note, the client actually subscribes to the *topic* **smarthome/mqtt_client/#** for future components support.
+
 
 ### Requirements
 
@@ -46,3 +46,8 @@ When the AskMyPc Controller recieves the payloads:
 - *word and google* it will open the google website as a web application and microsoft word as a desktop application.
 
 
+## Special Notes
+
+- Please note, the client actually subscribes to the *topic* **smarthome/mqtt_client/#** for future components support.
+- Please note, the client does not supports ssl connectivty to the broker, it is meant to run inside the local network.
+- Please note, the *payload* **request_status_update** is reserved for **Online** payloads requests to be published with the topic **smarthome/mqtt_client/status_update**, this function is meant for other clients to get the current status of the client. This payload will not be handed over to any current or future contollers.
