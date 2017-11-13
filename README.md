@@ -23,7 +23,7 @@ Build the jar file with maven using the following command within the folder cont
 This action will create a folder called *target* with the build project files, we only need three files, you can delete the rest and the downloaded repository after copying the three files to your selected path:
 - *AskMyPc-jar-with-dependencies.jar* is the application code.
 - *AskMyPc.bat* is the application activation script, edit the file in any text editor and update your broker's data inside the designated quotation marks.
-- *action_map.json* is the mapping file meant to map and action to perform on your computer to a payload recived to the topic.
+- *action_map.json* is the mapping file for mapping an action to perform on your computer to a payload recieved to the topic.
 
 #### Usage
 
