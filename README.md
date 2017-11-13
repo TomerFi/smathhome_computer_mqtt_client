@@ -25,14 +25,14 @@ This action will create a folder called *target* with the build project files, w
 - *AskMyPc.bat* is the application activation script, edit the file in any text editor and update your broker's data inside the designated quotation marks.
 - *action_map.json* is the mapping file for mapping an action to perform on your computer to a payload recieved to the topic.
 
-#### Usage
+### Usage
 
 To start the application, just double click the *AskMyPc.bat*, assuming it's configured properly, it will start the mqtt client and a message will be published with the *payload* **Online** to the *topic* **smarthome/mqtt_client/status_update** notifying the broker with the client status.</br>
 The client then will subscribe to the *topic* **smarthome/mqtt_client/#** and will transfer messages with the *topic* **smarthome/mqtt_client/askmypc_action** to the *AskMyPc Controller*.</br>
 
 AskMyPc Controller will get the message and iterate over the *action_map.json* looking for an action to perform based on the recieved *payload* and will try to perform it as a Desktop Application and if it failes, the controller will try to perform the action as a Web Application.
 
-##### Example of usage
+### Example of usage
 In the [*action_map.json file*](conf_files/action_map.json):
 - The *facebook* payload is mapped to *https://www.facebook.com/*.
 - The *excel* payload is mapped to *C:/Program Files/Microsoft Office/Root/Office16/EXCEL.EXE*
