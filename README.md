@@ -45,6 +45,13 @@ When the AskMyPc Controller recieves the payloads:
 - *excel* it will open microsoft excel as a desktop application.
 - *word and google* it will open the google website as a web application and microsoft word as a desktop application.
 
+When editing the *action_map.json* file, please check the syntax with [JSONLint](https://jsonlint.com/), a broken syntax will cause the application to crash.
+
+## Log Files
+
+All the log files are daily rolled:
+- *MqttConnectionManager.yyyy-MM-dd.log* is the log file for the Mqtt Client.
+- *AskMyPc.yyyy-MM-dd.log* is the log file for AskMyPc Controller.
 
 ## Special Notes
 
