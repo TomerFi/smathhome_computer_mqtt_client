@@ -12,7 +12,7 @@
 	</properties> 
   
 	<build>
-		<finalName>AskMyPc</finalName>
+		<finalName>SmarthomeMqttClient</finalName>
 	    <plugins>
 	    
 			<plugin>
@@ -20,7 +20,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>control.smarthome.askmypc.AskMyPc</mainClass>
+							<mainClass>control.smarthome.StartSmarthome</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -98,7 +98,7 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.25</version>
 		</dependency>
-		
+
 	</dependencies>
 
 </project>
