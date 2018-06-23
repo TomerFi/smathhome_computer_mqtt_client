@@ -1,1 +1,0 @@
-start java -jar AskMyPc-jar-with-dependencies.jar "broker address" "broker port" "client id" "broker user" "broker password"

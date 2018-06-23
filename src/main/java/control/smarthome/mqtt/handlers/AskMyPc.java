@@ -1,4 +1,4 @@
-package control.smarthome.askmypc;
+package control.smarthome.mqtt.handlers;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -15,22 +15,14 @@ import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import control.smarthome.mqtt.MessageHandler;
+import control.smarthome.mqtt.MessageHandlerV2;
 
-public class HandleActions implements MessageHandler{
+public class AskMyPc implements MessageHandlerV2{
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(AskMyPc.class);
 	
-	public HandleActions() {
-	}
-	
-	public void onMessageRecieved(String _topic, String _payload, int _qos) {
+	public void onMessageRecieved(String _topic, String _payload, int _qos, boolean _retain) {
 		getAction(_payload);		
-	}
-
-	public void onConnectionLost(Throwable _cause) {
-		LOGGER.info("connection lost, exiting. please fix error and restart");
-		System.exit(0);
 	}
 	
     private void getAction (String _actionName){
@@ -83,7 +75,5 @@ public class HandleActions implements MessageHandler{
 		} else {
 			LOGGER.warn("action for "+_actionName+" not found");
 		}
-    	
-
     }
 }
