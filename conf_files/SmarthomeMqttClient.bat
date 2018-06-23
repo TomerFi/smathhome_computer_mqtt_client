@@ -1,0 +1,1 @@
+start java -jar SmarthomeMqttClient-jar-with-dependencies.jar "broker address" "broker port" "client id" "broker user" "broker password"
