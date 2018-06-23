@@ -55,14 +55,9 @@ public class StartSmarthome {
 			/* *
 			 * Here you can register an handler to a topic.
 			 * Handlers implements the control.smarthome.mqtt.MessageHandlerV2 interface.
-			 * There are 4 different handlers registered here, only the first one is actually doing something.
-			 * The other 3 just print the messages and use them as an example.
 			 * Don't forget configuring the loggers accordingly in src/main/resources/log4j.properties.
 			 * */
 			connection.setTopicHandler("smarthome/askmypc/action", new AskMyPc());
-			connection.setTopicHandler("omg/#", new RFGateway());
-			connection.setTopicHandler("multisensor/#", new MultiSensors());
-			connection.setTopicHandler("owntracks/#", new Owntracks());
 			
 		} catch (ConnectionManagerV2Exception ex) {
 			LOGGER.error("failed to start, caught exception: " + ex.getMessage());
