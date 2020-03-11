@@ -1,5 +1,7 @@
 # Control Smarthome Windows PC Mqtt Client
 
+![Maintenance](https://img.shields.io/maintenance/no/2020)
+
 A java mqtt client for a windows pc with addons, runs as a jar written in java with maven.</br>
 Upon connecting or disconnecting to the mqtt broker, the client publishes a message to the *topic* **smarthome/mqtt_client/status_update** with the *payload* **Online/Offline**.
 
